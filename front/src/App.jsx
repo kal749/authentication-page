@@ -16,6 +16,15 @@ function App() {
   const [signupEmail, setSignupEmail] = useState("");
   const [signupResult, setSignupResult] = useState("");
 
+if (!signupEmail.includes("@")){
+  alert("Invalid email");
+  return;
+}
+if (password.length < 6){
+  alert("password must be at least 6 characters");
+}
+  } 
+
   function login() {
     fetch(
       `http://localhost:3000/login?phonenumber=${phonenumber}&password=${password}`,
@@ -49,6 +58,7 @@ function App() {
         action="/signup"
         method="get"
       >
+        
         <input
           onChange={(value) => setPhonenumber(value.target.value)}
           type="text"
