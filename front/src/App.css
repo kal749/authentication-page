@@ -5,12 +5,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#df93b9,#e2e8e9);
 }
 
 .auth-container {
@@ -62,49 +62,46 @@ body {
     transition: 0.3s;
 }
 
-.input-group input:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+.input-group input:focus{
+    border-color:#ede3ea;
+    box-shadow:0 0 8px rgba(236, 190, 219, 0.3);
 }
 
-button {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 10px;
-    background: #4f46e5;
-    color: white;
-    font-size: 17px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 10px;
+button{
+    width:10%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#d98f4b;
+    color:rgb(32, 24, 9);
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:10px;
 }
 
-button:hover {
-    background: #3730a3;
-    transform: translateY(-2px);
+button:hover{
+    background:#656296;
+    transform:translateY(-2px);
 }
 
-.message {
-    text-align: center;
-    margin-top: 15px;
-    color: red;
-    font-size: 14px;
+.message{
+    text-align:center;
+    margin-top:15px;
+    color:rgb(207, 166, 166);
+    font-size:14px;
 }
 
-.success {
-    color: green;
-}
 
 .auth-footer {
     text-align: center;
     margin-top: 20px;
 }
 
-.auth-footer a {
-    text-decoration: none;
-    color: #4f46e5;
-    font-weight: 600;
+.auth-footer a{
+    text-decoration:none;
+    color:#cfcee4;
+    font-weight:600;
 }
 
 .auth-footer a:hover {
