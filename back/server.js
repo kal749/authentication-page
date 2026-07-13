@@ -6,9 +6,12 @@ const PORT = 3000;
 
 app.use(cors());
 app.use(express.json());
+
+
 app.get('/api/test', (req, res) => {
     res.json({ message: 'Backend working!' });
 });
+
 
 
 app.get('/api/signup', (req, res) => {
@@ -26,11 +29,12 @@ app.get('/api/signup', (req, res) => {
 });
 
 
+
 app.get('/api/login', (req, res) => {
     const { phonenumber, password } = req.query;
 
     try {
-       
+        
         const stmt = db.prepare(`SELECT * FROM users WHERE phonenumber = ? AND password = ?`);
         const user = stmt.get(phonenumber, password);
         
@@ -47,6 +51,7 @@ app.get('/api/login', (req, res) => {
         res.json({ error: error.message });
     }
 });
+
 
 
 app.get('/api/users', (req, res) => {
