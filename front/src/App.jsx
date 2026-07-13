@@ -4,16 +4,19 @@ import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
 
- const [phonenumber, setPhonenumber] = useState("");
+function App() {
+  const [phonenumber, setPhonenumber] = useState("");
   const [password, setPassword] = useState("");
   const [users, setUsers] = useState([]);
-
 
   const [signupName, setSignupName] = useState("");
   const [signupEmail, setSignupEmail] = useState("");
   const [signupPhonenumber, setSignupPhonenumber] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
   const [signupResult, setSignupResult] = useState("");
+
+  // You need to define PORT - either as a constant or environment variable
+  const PORT = 3000; // or process.env.PORT
 
   function login() {
     if (password.length < 6) {
