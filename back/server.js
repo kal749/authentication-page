@@ -13,6 +13,7 @@ app.get('/api/test', (req, res) => {
 });
 
 
+
 app.get('/api/signup', (req, res) => {
     const { name, email, phonenumber, password } = req.query;
 
@@ -26,6 +27,7 @@ app.get('/api/signup', (req, res) => {
         res.status(400).send(error.message);
     }
 });
+
 
 
 app.get('/api/login', (req, res) => {
@@ -49,6 +51,7 @@ app.get('/api/login', (req, res) => {
         res.json({ error: error.message });
     }
 });
+
 
 
 app.get('/api/users', (req, res) => {
