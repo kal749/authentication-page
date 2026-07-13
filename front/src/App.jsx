@@ -27,7 +27,7 @@ function App() {
 
 function login() {
   fetch(
-    `http://localhost:3000/login?phonenumber=${phonenumber}&password=${password}`,
+    `http://http://localhost:${PORT}/api/login?phonenumber=${phonenumber}&password=${password}`,
   )
     .then((response) => response.json())
     .then((json) => {
@@ -38,7 +38,7 @@ function login() {
 
 function signup() {
   fetch(
-    `http://localhost:3000/signup?phonenumber=${signupPhonenumber}&name=${signupName}&email=${signupEmail}&password=${signupPassword}`,
+    `http://localhost:${PORT}/api/signup?phonenumber=${signupPhonenumber}&name=${signupName}&email=${signupEmail}&password=${signupPassword}`,
   )
     .then((response) => response.text())
     .then((text) => {
